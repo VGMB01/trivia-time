@@ -1,0 +1,105 @@
+
+.containerCategory {
+  min-height: 100vh;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-white);
+  padding: 1em;
+}
+
+.containerCategory h2 {
+  text-shadow: -2px -2px 10px var(--color-roseNeon), 2px 2px 10px var(--color-roseNeon),
+    0 0 20px var(--color-roseNeon), 0 0 40px var(--color-roseNeon),
+    0 0 60px var(--color-roseNeon);
+  font-size: clamp(25px, 4.17vw, 40px);
+  text-align: center;
+}
+
+.containerCategory__Categorys {
+  padding: 36px;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  gap: 40px;
+}
+
+.containerCategory__Categorys-Card {
+  background: linear-gradient(0deg, var(--color-background), #6a035f);
+  border-radius: 10px;
+  animation: glow 2s ease-in-out infinite;
+  text-align: center;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px var(--color-roseNeon), 0 0 20px var(--color-roseNeon), 0 0 30px var(--color-roseNeon);
+  }
+  100% {
+    color: var(--color-grey);
+    stroke-opacity: 0.2;
+  }
+}
+/********************************************************************f**/
+/************************ Name ***************************/
+/**********************************************************************/
+
+.nameCategory {
+  margin-bottom: auto;
+  margin-top: auto;
+  color: var(--color-white);
+}
+
+/**********************************************************************/
+/************************Button***************************/
+/**********************************************************************/
+
+.form-button {
+  border: 0;
+  background-image: linear-gradient(
+    150deg,
+    var(--color-orangeNeon),
+    var(--color-greenNeon),
+    var(--color-roseNeon),
+    var(--color-skyblueNeon)
+  );
+  border-radius: 8px;
+  color: var(--color-white);
+  display: flex;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.25s;
+  width: clamp(70px, 19.44vw, 140px);
+}
+
+.form-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.form-button:active {
+  transform: scale(0.9);
+ 
+}
+
+.form-button span {
+  background-color: var(--color-black);
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  width: clamp(73px, 20.28vw, 130px);
+  font-size: clamp(12px,calc(9.35px + 0.735vw) ,15px);
+}
+
+.form-button:hover span {
+  background: none;
+  color: var(--color-black);
+}
+

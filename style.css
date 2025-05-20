@@ -1,0 +1,540 @@
+
+.main {
+  min-height: 100vh;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;  
+  max-width: 1200px;
+  height: 90vh;
+  aspect-ratio: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container__svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******************************************************************************/
+/***************************TRIANGLE***************************/
+/******************************************************************************/
+.triangle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-container__svg--rose {
+  width: min(80vh, 80vw);
+  height: min(80vh, 80vw);
+  stroke: var(--color-roseNeon);
+  filter: var(--shadow-roseNeon);
+  z-index: 5;
+  animation: blink 1s infinite backwards;
+}
+
+.main-container__svg--orange {
+  width: min(60vh, 60vw);
+  height: min(60vh, 60vw);
+  stroke: var(--color-orangeNeon);
+  filter: var(--shadow-orangeNeon);
+  z-index: 10;
+  animation: blink 1.5s infinite backwards;
+}
+
+.main-container__svg--green {
+  width: min(40vh, 40vw);
+  height: min(40vh, 40vw);
+  stroke: var(--color-greenNeon);
+  filter: var(--shadow-greenNeon);
+  z-index: 15;
+  animation: blink 2s infinite backwards;
+}
+
+.main-container__svg--skyblue{
+  width: min(20vh, 20vw);
+  height: min(20vh, 20vw);
+  stroke: var(--color-skyblueNeon);
+  filter: var(--shadow-skyblueNeon);
+  z-index: 20;
+  animation: blink 2.5s infinite backwards;
+}
+
+/**********************************************************************/
+/************************Efect blink ***************************/
+/**********************************************************************/
+@keyframes blink {
+  to {
+    color: var(--color-grey);
+    stroke-opacity: 0.2;
+  }
+}
+/******************************************************************************/
+/***************************QUIEZ***************************/
+/******************************************************************************/
+.quiez{
+  position: absolute;
+  bottom: 41%;
+}
+.main-container__svg--quiezBig {
+  width: min(50vh, 50vw);
+  height: min(50vh, 50vw);
+  z-index: 30;
+  stroke: var(--color-background); /* Color del contorno */
+  stroke-width: 2; /* Grosor del contorno */
+  filter: drop-shadow(0 0 4px var(--color-roseNeon)) drop-shadow(0 0 8px var(--color-roseNeon));
+}
+.main-container__svg--quiezSmall {
+  width: min(50vh, 50vw);
+  height: min(50vh, 50vw);
+  z-index: 50;
+  stroke: var(--color-greenNeon); 
+  stroke-width: 0.3; 
+  filter: drop-shadow(0 0 4px var(--color-grey)) drop-shadow(0 0 8px var(--color-grey));
+}
+
+/******************************************************************************/
+/***************************container__letterNeon***************************/
+/******{************************************************************************/
+
+.main-container__letter {
+  position: relative;
+  bottom: 14%;
+  z-index: 60;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-skyblueNeon);
+  font-size: clamp(70px, 10vw, 100px);
+  text-shadow: 0 0 20px var(--color-roseLetter), 0 0 40px var(--color-roseLetter), 0 0 80px var(--color-roseLetter);
+}
+
+/******************************************************************************/
+/***************************Botton play ***************************/
+/******************************************************************************/
+
+.main-container__btnNeon {
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  bottom: 18%;
+  margin-top: 2vh;
+  cursor: pointer;
+  padding: 15px 30px;
+  color: var(--color-skyblueNeon);
+  text-decoration: none;
+  font-size: clamp(16px, 2vw, 24px);
+  transition: 0.2s; 
+  border: 1px solid var(--color-skyblueNeon);
+  /* text-shadow: -2px -2px 10px #fff, 
+    2px 2px 10px #fff, 
+    0 0 20px var(--color-redNeon),
+    0 0 40px var(--color-redNeon),
+    0 0 60px var(--color-redNeon),
+    0 0 80px var(--color-redNeon),
+    0 0 100px var(--color-redNeon); */
+  box-shadow: 0 0 5px var(--color-skyblueNeon),
+    0 0 10px var(--color-skyblueNeon),
+    0 0 15px var(--color-skyblueNeon), 
+    0 0 30px var(--color-skyblueNeon);  
+}
+.main-container__btnNeon:hover{
+  border: 1px solid var(--color-greenNeon);
+  background: var(--color-greenNeon);
+  box-shadow: 0 0 10px var(--color-greenNeon), 0 0 30px var(--color-greenNeon), 0 0 40px var(--color-greenNeon),
+    0 0 80px var(--color-greenNeon);
+    color: var(--color-background);
+}
+/******************************************************************************/
+/***************************Media query ***************************/
+/******************************************************************************/
+@media (min-width: 398px) {
+  .main-container__letter {
+    bottom: 12%;
+  }
+  .main-container__btnNeon {
+    bottom: 13%;
+  }
+}
+
+@media (min-width: 474px) {
+  .main-container__letter {
+    bottom: 11%;
+  }
+}
+
+
+@media (min-width: 507px) {
+  .main-container__letter {
+    bottom: 9%;
+  }
+  .main-container__btnNeon {
+    bottom: 10%;
+  }
+  .quiez{
+    bottom: 39%;
+  }
+}
+
+
+@media (min-width: 558px) {
+  .main-container__letter {
+    bottom: 7%;
+  }
+  .main-container__btnNeon {
+    bottom: 8%;
+  }
+  .quiez{
+    bottom: 37%;
+  }
+}
+
+@media (min-width: 626px) {
+  .main-container__letter {
+    bottom: 6%;
+  }
+  .main-container__btnNeon {
+    bottom: 6%;
+  }
+  .quiez{
+    bottom: 35%;
+  }
+}
+
+
+
+@media (min-width: 686px) {
+  .main-container__svg--rose {
+    width: min(75vh, 75vw);
+    height: min(75vh,75vw);
+  }
+
+  .main-container__letter {
+    bottom: 4%;
+  }
+  .main-container__btnNeon {
+    bottom: 4%;
+  }
+  .quiez{
+    bottom: 33%;
+  }
+}
+
+
+@media (min-width: 720px) {
+
+  .quiez{
+    bottom: 35%;
+  }
+  .main-container__svg--rose {
+    width: min(70vh, 70vw);
+    height: min(70vh,70vw);
+  }
+  .main-container__svg--orange {
+    width: min(55vh, 55vw);
+    height: min(55vh, 55vw);
+
+  }
+  .main-container__letter {
+    bottom: 4%;
+  }
+  .main-container__svg--quiezBig {
+    width: min(45vh, 45vw);
+    height: min(45vh, 45vw);
+  
+  }
+  .main-container__svg--quiezSmall {
+    width: min(45vh, 45vw);
+    height: min(45vh, 45vw);
+
+  }
+  .main-container__btnNeon {
+    bottom: 4%;
+  }
+}
+
+
+
+@media (min-width: 758px) {
+
+  .main-container__svg--rose {
+    width: min(65vh, 65vw);
+    height: min(65vh,65vw);
+  }
+  .main-container__svg--orange {
+    width: min(50vh, 50vw);
+    height: min(50vh, 50vw);
+
+  }
+  .main-container__svg--quiezBig {
+    width: min(40vh, 40vw);
+    height: min(40vh, 40vw);
+  
+  }
+  .main-container__svg--quiezSmall {
+    width: min(40vh, 40vw);
+    height: min(40vh, 40vw);
+
+  }
+
+}
+
+@media (min-width: 891px) {
+  .main-container__letter {
+    bottom: 2%;
+  }
+  .main-container__btnNeon {
+    bottom: 2%;
+  }
+  .quiez{
+    bottom: 34%;
+  }
+}
+
+
+@media (min-width: 970px) {
+
+  .quiez{
+    bottom: 35%;
+  }
+  .main-container__svg--rose {
+    width: min(60vh, 60vw);
+    height: min(60vh,60vw);
+  }
+  .main-container__svg--orange {
+    width: min(50vh, 50vw);
+    height: min(50vh, 50vw);
+
+  }
+  .main-container__svg--green {
+    width: min(38vh, 38vw);
+    height: min(38vh, 38vw);
+   
+  }  
+
+  .main-container__svg--quiezBig {
+    width: min(40vh, 40vw);
+    height: min(40vh, 40vw);
+  
+  }
+  .main-container__svg--quiezSmall {
+    width: min(40vh, 40vw);
+    height: min(40vh, 40vw);
+
+  }
+ 
+}
+
+
+/***************************class for hidden ***************************/
+/* **************************************************** */
+.bg-modal--hidden{
+  display: none;
+}
+ /***************************container Name***************************/
+ /* *********************************************************************** */
+
+ .bg-modal{
+  min-height: 100vh;
+  width: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  background-color: rgba(0, 0, 0, 0.608);
+  z-index: 70;
+}
+
+dialog {
+  border: none;
+  box-shadow: 0 0 10px var(--color-roseLetter), 0 0 40px var(--color-roseLetter), 0 0 80px var(--color-roseLetter);
+
+
+}
+/*************************** button X ***************************/
+.modal-name__btnX{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+.modal-name__btnClose{
+  display: flex;
+  justify-content: flex-end;
+  border: 0;
+  background-image: linear-gradient(150deg,
+  var(--color-orangeNeon),
+  var(--color-greenNeon),
+  var(--color-roseNeon),
+  var(--color-skyblueNeon));
+  border-radius: 50px;
+  color: var(--color-black);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.modal-name__btnClose:active {
+  transform: scale(0.8);
+}
+/*************************** text your name ***************************/
+.modal-name__title{
+  color: var(--color-white);
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px var(--color-roseLight), 0 0 20px var(--color-roseLight), 0 0 25px var(--color-roseLight);
+
+}
+/*************************** Form ***************************/
+
+.modal-name{
+  background-color: var(--color-black);
+  padding: 5px 5px 0 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--color-white);;
+  width: 70%;  
+  max-width: 450px;
+  min-height: 300px;
+  height: 25vh;
+  font-size: 18px;
+ 
+}
+ 
+.modal-name--position{
+  position: relative;
+  overflow: hidden ;
+}
+
+/* ******************************************************************************* */
+/* ******************************Efecto del input ********************************* */
+/* ******************************************************************************* */
+.modal-name__form {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.modal-name__form input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none; 
+  outline: none; 
+  color: var(--color-white);
+}
+
+.modal-name__form .modal-name__form-lblNombre{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  border-bottom: 1px solid var(--color-roseLight)
+}
+
+.modal-name__form .modal-name__form-lblNombre::after , .modal-name__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(270deg,
+  var(--color-roseNeon),
+  var(--color-skyblueNeon),
+  var(--color-greenNeon)) 1 ;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+
+.modal-name_form-yourName {
+  position: absolute;
+  bottom:5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: var(--color-roseLight);
+}
+ 
+.modal-name__form input:focus + label span,
+.modal-name__form input:valid + label span{
+  transform: translateY(-150%);
+  font-size: 16px;
+  color: var(--color-greenNeon);
+}
+
+.modal-name__group:focus-within .modal-name__title,
+.modal-name__form input:valid .modal-name__title{
+  text-shadow: 0 0 10px var(--color-greenNeon), 0 0 20px var(--color-greenNeon), 0 0 25px var(--color-greenNeon);
+}  
+
+.modal-name__form input:focus {
+  color: var(--color-roseNeon);         
+  font-size: 18px;                      
+  text-transform: capitalize; 
+
+}
+.modal-name__form input:focus + .modal-name__form-lblNombre::after,
+.modal-name__form input:focus + .modal-name__form-lblNombre:valid {
+  transform: translateX(0); 
+}
+
+/**********************************************************************/
+/************************Button***************************/
+/**********************************************************************/
+.modal-name__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.modal-name__button-rainbow{
+  border: 0;
+  background-image: linear-gradient(150deg,
+  var(--color-orangeNeon),
+  var(--color-greenNeon),
+  var(--color-roseNeon),
+  var(--color-skyblueNeon));
+  border-radius: 8px;
+  color: var(--color-white);
+  display: flex;
+  font-size: 18px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.25s;
+  }
+  
+  .modal-name__button-rainbow span{
+    background-color:var(--color-black);
+    padding: 10px 20px;
+    border-radius: 6px;
+  }
+  
+  .modal-name__button-rainbow:hover span{
+     background: none;
+     color: var(--color-black);
+  }
+  
+ .modal-name__button-rainbow:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+  .modal-name__button-rainbow:active {
+    transform: scale(0.9);
+  }

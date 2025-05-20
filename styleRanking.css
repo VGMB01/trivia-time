@@ -1,0 +1,124 @@
+
+.container-ranking__title {
+  color: var(--color-white);
+  text-shadow: -2px -2px 10px var(--color-roseNeon), 2px 2px 10px var(--color-roseNeon),
+    0 0 20px var(--color-roseNeon), 0 0 40px var(--color-roseNeon),
+    0 0 60px var(--color-roseNeon);
+  font-size: 36px;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-ranking {
+  width: 100%;
+  max-width: 1200px;
+  height: 95vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.container-ranking__list {
+  position: relative;
+  width: 90%;
+  margin: 20px;
+}
+
+.container-ranking__list .container-ranking__item {
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-items);
+  color: var(--color-white);
+  margin: 5px 0;
+  transition: 0.5s;
+  padding-left: 30px;
+  padding: 10px;
+}
+
+.container-ranking__score {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.container-ranking__list .container-ranking__item:nth-child(1) {
+  background: var(--color-firstPlace);
+}
+.container-ranking__list .container-ranking__item:nth-child(2) {
+  background: var( --color-secondPlace);
+}
+.container-ranking__list .container-ranking__item:nth-child(3) {
+  background: var(--color-thirdPlace);
+}
+
+.container-ranking__list .container-ranking__item:hover {
+  transform: scale(1.1);
+  border: 0;
+  background-image: linear-gradient(
+    150deg,
+    var(--color-redNeon),
+    var(--color-greenNeon),
+    var(--color-roseNeon),
+    var(--color-skyblueNeon)
+  );
+  border-radius: 8px;
+}
+
+img {
+  height: 30px;
+  display: flex;
+  justify-content: end;
+}
+
+.container-ranking__number{
+  margin: 0px 10px;
+}
+
+/**********************************************************************/
+/************************Button***************************/
+/**********************************************************************/
+.form-button {
+  border: 0;
+  background-image: linear-gradient(
+    150deg,
+    var(--color-orangeNeon),
+    var(--color-greenNeon),
+    var(--color-roseNeon),
+    var(--color-skyblueNeon)
+  );
+  border-radius: 8px;
+  color: var(--color-white);
+  display: flex;
+  font-size: 18px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.form-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.form-button:active {
+  transform: scale(0.9);
+}
+
+.form-button span {
+  background-color:var(--color-black);
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.form-button:hover span {
+  background: none;
+  color: var(--color-blackRe);
+}

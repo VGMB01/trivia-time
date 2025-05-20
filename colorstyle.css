@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  
+}
+:root {
+  --color-redNeon: #B22222;
+  --color-roseLetter:#ea18f2;
+  --color-roseLight:#EF4DF5;
+  --color-skyblueNeon: #00ffff;
+  --color-orangeNeon: #FF5F1F;
+  --color-greenNeon: #13f931;
+  --color-roseNeon: #e20ad3;
+  --color-background: #370332;
+  --color-grey: #808080;
+  --color-black:#000000; 
+  --color-white:#ffffff;
+  --color-items: #ffffff1a;
+  --color-firstPlace:#ffffff99;
+  --color-secondPlace:#ffffff66;
+  --color-thirdPlace:#ffffff33;
+  --shadow-skyblueNeon: drop-shadow(0 0 5px #00ffff) 
+                        drop-shadow(0 0 15px rgb(0, 255, 255))
+                        drop-shadow(0 0 30px rgb(0, 255, 255)); 
+  --shadow-orangeNeon: drop-shadow(0 0 5px  #FF5F1F)
+                    drop-shadow(0 0 15px  rgb(255, 94, 31))
+                    drop-shadow(0 0 20px  rgb(255, 95, 31));
+  --shadow-greenNeon:drop-shadow(0 0 5px #13f931)
+                      drop-shadow(0 0 15px rgb(19, 249, 49))
+                       drop-shadow(0 0 20px rgb(19, 249, 49)); 
+  --shadow-roseNeon: drop-shadow(0 0 5px #ea18f2)
+                     drop-shadow(0 0 15px rgb(234, 24, 242))
+                    drop-shadow(0 0 20px rgb(234, 24, 242)); 
+
+}

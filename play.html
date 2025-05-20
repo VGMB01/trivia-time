@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>play</title>
+    <link rel="stylesheet" href="colorstyle.css">
+    <link rel="stylesheet" href="stylePlay.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="containerPlay">
+      <div>
+        <div class="containerPlay__head">
+          <div class="containerPlay__head-timer">
+            <span class="containerPlay__timer-count"></span>
+          </div>
+          <h2 class="containerPlay__head-playerName">Valeska Moreno</h2>
+          <!-- <progress class="barProgress" id="barProgress" min="0" max="100" value="75"></progress>  -->
+          <div class="containerPlay__head-Progress">
+            <div class="containerPlay__progress-bar">
+              <div class="containerPlay__progress"></div>
+            </div>
+            <div class="containerPlay__progress-percentage">
+              <span>8</span>
+              <span>/</span>
+              <span>10</span>
+              <img src="image/senal.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="containerPlay__ask">
+          <h1 class="font-size">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime sed
+            adipisci quas expedita iusto rem blanditiis aperiam atque cumque
+            consequatur? Rerum quos fugit officia cum eos obcaecati sapiente
+            impedit reiciendis.
+          </h1>
+          <span class="spin1" id="span1"></span>
+          <span class="spin2" id="span2"></span>
+          <span class="spin3" id="span3"></span>
+          <span class="spin4" id="span4"></span>
+        </div>
+        <div class="containerPlay__answer">
+          <div class="containerPlay__answer-correct">
+            <button class="containerPlay__answer-op" id="op">Option1</button>
+          </div>
+          <div class="containerPlay__answer-incorrect">
+            <button class="containerPlay__answer-op" id="op">Option2</button>
+          </div>
+          <button class="containerPlay__answer-op" id="op">Option3</button>
+          <button class="containerPlay__answer-op" id="op">Option4</button>
+        </div>
+        <div class="button">
+          <button class="form-button">
+            <span>Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
