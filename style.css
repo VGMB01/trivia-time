@@ -336,20 +336,13 @@
   }
  
 }
-
-
-/***************************class for hidden ***************************/
-/* **************************************************** */
-.bg-modal--hidden{
-  display: none;
-}
- /***************************container Name***************************/
+ /*************************** container modal ***************************/
  /* *********************************************************************** */
 
  .bg-modal{
   min-height: 100vh;
   width: 100%;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed; 

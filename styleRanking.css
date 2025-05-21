@@ -120,5 +120,5 @@ img {
 
 .form-button:hover span {
   background: none;
-  color: var(--color-blackRe);
+  color: var(--color-black);
 }
